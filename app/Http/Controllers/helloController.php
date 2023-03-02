@@ -6,7 +6,15 @@ use Illuminate\Http\Request;
 
 class helloController extends Controller
 {
-    function index(){
+    public function index(){
         echo 'hello';
+    }
+
+    public function world_message(){
+        echo "world";
+    }
+
+    public function welcome(){
+        return view('welcome');
     }
 }
