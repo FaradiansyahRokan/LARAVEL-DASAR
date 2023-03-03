@@ -13,7 +13,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        //
+        echo "ini Adalah index";
     }
 
     /**
@@ -23,7 +23,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+        echo "ini adalah Page Create";
     }
 
     /**
@@ -34,7 +34,7 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // 
     }
 
     /**
@@ -45,7 +45,7 @@ class PostController extends Controller
      */
     public function show($id)
     {
-        //
+        echo "ini adalah page detail dengan id = $id";
     }
 
     /**
@@ -56,7 +56,7 @@ class PostController extends Controller
      */
     public function edit($id)
     {
-        //
+        echo "ini adalah page detail dengan id = $id";
     }
 
     /**
@@ -68,7 +68,7 @@ class PostController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        // 
     }
 
     /**
