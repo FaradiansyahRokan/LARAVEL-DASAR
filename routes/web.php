@@ -23,4 +23,5 @@ Route::get('/', function () {
 // Route::get('hello', [helloController::class, 'index']);
 // Route::get('world', [helloController::class, 'world_message']);
 // Route::get('welcome', [helloController::class, 'welcome']);
+Route::resource('posting', PostController::class);
 ?>
