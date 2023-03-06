@@ -13,7 +13,12 @@ class PostController extends Controller
      */
     public function index()
     {
-        echo "ini Adalah index";
+        $view_data = [
+            'posts' => [
+                "satu", "dua", "tiga"
+            ]
+        ];
+        return view('posts.index', $view_data);
     }
 
     /**
