@@ -10,7 +10,7 @@
     <!-- Menampilkan 1 var (menggunakan 2 kurung kurawal) -->
     {{ $posts }}
 
-    @foreach($posts as $post)
+    @foreach($posts as $p)
         {{ $post }}<br/>
     @endforeach
 </body>
