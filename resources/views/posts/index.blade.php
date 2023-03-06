@@ -11,7 +11,7 @@
     {{ $posts }}
 
     @foreach($posts as $p)
-        {{ $post }}<br/>
+    {{ $p }}
     @endforeach
 </body>
 </html>

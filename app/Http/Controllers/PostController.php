@@ -13,12 +13,10 @@ class PostController extends Controller
      */
     public function index()
     {
-        $view_data = [
-            'posts' => [
-                "satu", "dua", "tiga"
-            ]
+        $vData = [
+            'posts' => 'satu', 'dua', 'tiga'
         ];
-        return view('posts.index', $view_data);
+        return view('posts.index', $vData);
     }
 
     /**
