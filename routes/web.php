@@ -25,6 +25,8 @@ Route::get('/', function () {
 // Route::get('world', [helloController::class, 'world_message']);
 // Route::get('welcome', [helloController::class, 'welcome']);
 Route::get('toko' , [TokoController::class , 'index']);
+Route::get('post' , [PostController::class , 'index']);
+Route::get('post/{id}' , [PostController::class , 'show']);
 
 
 ?>
