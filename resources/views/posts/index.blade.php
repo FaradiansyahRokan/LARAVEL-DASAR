@@ -25,21 +25,20 @@
 
 <body>
 
-    <div class="container">
-        <h1>Post</h1>
+    <div class="container my-4">
+        <h1>Blog</h1>
 
 
         @foreach($posts as $p )
         @php($p= explode(",",$p))
         
 
-        <div class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
+        <div class="card my-4" style="width: 58rem;">
             <div class="card-body">
-                <h5 class="card-title">{{$p[0]}}</h5>
-                <p class="card-text">{{$p[1]}}</p>
+                <h5 class="card-title">{{$p[1]}}</h5>
+                <p class="card-text">{{$p[2]}}</p>
                 <p class="card-text"><small class="text-muted">{{ date("d M Y H:i", strtotime('$p[3]')) }}</small></p>
-                <a href="#" class="btn btn-primary">selengkapnya</a>
+                <a href="{{ url("posts/$p[0]") }}" class="btn btn-primary">selengkapnya</a>
                 
             </div>
         </div>

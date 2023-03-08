@@ -14,13 +14,15 @@
 </head>
 
 <body>
-    <article class="container blog-post">
+    <article class="container blog-post my-4">
         <h2 class="blog-post-title mb-1">{{$post[1]}}</h2>
         <p class="blog-post-meta">{{$post[3]}} <a href="#">Mark</a></p>
 
         <p>{{$post[2]}}</p>
         
+        <a href="{{ url('posts')}}" class="btn btn-success">Kembali</a>
     </article>
+
     <!-- javascript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 </body>
