@@ -26,7 +26,9 @@
 <body>
 
     <div class="container my-4">
-        <h1>Blog</h1>
+        <h1>Postingan
+          <a href="{{ url('posts/create')}}" class="btn btn-outline-success">Buat Postingan</a>
+        </h1>
 
 
         @foreach($posts as $p )
@@ -38,7 +40,7 @@
                 <h5 class="card-title">{{$p[1]}}</h5>
                 <p class="card-text">{{$p[2]}}</p>
                 <p class="card-text"><small class="text-muted">{{ date("d M Y H:i", strtotime('$p[3]')) }}</small></p>
-                <a href="{{ url("posts/$p[0]") }}" class="btn btn-primary">selengkapnya</a>
+                <a href="{{ url("posts/$p[0]") }}" class="btn btn-outline-primary">selengkapnya</a>
                 
             </div>
         </div>
