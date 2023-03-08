@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class PostController extends Controller
 {
@@ -13,10 +14,15 @@ class PostController extends Controller
      */
     public function index()
     {
-        $vData = [
-            'posts' => 'satu', 'dua', 'tiga'
+        $posts = Storage::get('posts.txt');
+        $posts = explode("\n",$posts);
+        
+        $data = [
+            'posts' => $posts
         ];
-        return view('posts.index', $vData);
+
+        return view ('posts.index',$data);
+
     }
 
     /**
@@ -26,7 +32,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        echo "ini adalah Page Create";
+        //
     }
 
     /**
@@ -37,7 +43,7 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        // 
+        //
     }
 
     /**
@@ -48,8 +54,21 @@ class PostController extends Controller
      */
     public function show($id)
     {
-        echo "ini adalah page detail dengan id = $id";
-    }
+        $posts = Storage::get('posts.txt');
+        $posts = explode("\n",$posts);
+        $selected_post = Array();
+        foreach($posts as $p){
+            $p = explode(",",$p);
+            if ($p[0] == $id){
+                $selected_post = $p;
+            }
+        }
+
+        $data = [
+            'post' => $selected_post
+        ];
+        return view('posts.show',$data);
+    }   
 
     /**
      * Show the form for editing the specified resource.
@@ -59,7 +78,7 @@ class PostController extends Controller
      */
     public function edit($id)
     {
-        echo "ini adalah page detail dengan id = $id";
+        //
     }
 
     /**
@@ -71,7 +90,7 @@ class PostController extends Controller
      */
     public function update(Request $request, $id)
     {
-        // 
+        //
     }
 
     /**
@@ -85,4 +104,3 @@ class PostController extends Controller
         //
     }
 }
-?>

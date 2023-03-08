@@ -1,9 +1,8 @@
 <?php
 
+namespace App\Http\Controllers;
+use App\Http\Controllers\HelloController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\helloController;
-use App\Http\Controllers\PostController;
-use App\Http\Controllers\TokoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,13 +19,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Route::get('hello', 'App\Http\Controllers\helloController@index');
-// Route::get('hello', [helloController::class, 'index']);
-// Route::get('world', [helloController::class, 'world_message']);
-// Route::get('welcome', [helloController::class, 'welcome']);
-Route::get('toko' , [TokoController::class , 'index']);
-Route::get('post' , [PostController::class , 'index']);
-Route::get('post/{id}' , [PostController::class , 'show']);
+// Route::get('hello', 'App\Http\Controllers\HelloController@index');
+// // Route::get('hello',[HelloController::class,'index']);
+// Route::get('welcome',[HelloController::class,'welcome']);
 
-
-?>
+Route::get('posts',[PostController::class,'index']);    
+Route::get('posts/{id}',[PostController::class,'show']);
